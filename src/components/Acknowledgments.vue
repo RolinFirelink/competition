@@ -10,7 +10,7 @@
         <div class="person-avatar">
           <img 
             :src="person.avatar" 
-            :alt="person.name"
+            :alt="person.name + '头像'"
             @error="handleImageError"
           />
         </div>
@@ -24,6 +24,9 @@
 </template>
 
 <script>
+// 正确导入图片资源，确保Vite能够处理
+import enrenImage from '/src/assets/images/恩人.jpg'
+
 export default {
   name: 'Acknowledgments',
   data() {
@@ -32,7 +35,7 @@ export default {
         {
           id: 1,
           name: 'Gasly🔟🇫🇷',
-          avatar: '/src/assets/images/community.jpg',
+          avatar: enrenImage,
           message: '感谢Gasly🔟🇫🇷对我的赞助,包括资金上的帮助和支持我的PS5手柄，是你的赞助让我能够坚持创作优质内容,真的非常感谢！'
         }
         // 后续可以通过硬编码添加更多鸣谢对象

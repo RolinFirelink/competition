@@ -18,7 +18,7 @@
           <h4>微信赞赏</h4>
           <div class="support-image" @click="showImageModal('wechat')">
             <img 
-              src="https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/f0564de49725a4b8f80555d4d07723b.jpg"
+              :src="supportImages.wechat"
               alt="微信赞赏码"
               @error="handleImageError"
             />
@@ -30,7 +30,7 @@
           <h4>支付宝</h4>
           <div class="support-image" @click="showImageModal('alipay')">
             <img 
-              src="https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/20250802234355.png"
+              :src="supportImages.alipay"
               alt="支付宝收款码"
               @error="handleImageError"
             />
@@ -52,6 +52,9 @@
 
 <script>
 import ImageModal from './ImageModal.vue'
+// 正确导入图片资源，确保Vite能够处理
+import wechatSupportImage from '/src/assets/images/wechat-support.jpg'
+import alipaySupportImage from '/src/assets/images/alipay-support.jpg'
 
 export default {
   name: 'Support',
@@ -64,8 +67,8 @@ export default {
       modalImageSrc: '',
       modalImageAlt: '',
       supportImages: {
-        wechat: 'https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/f0564de49725a4b8f80555d4d07723b.jpg',
-        alipay: 'https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/20250802234355.png'
+        wechat: wechatSupportImage,
+        alipay: alipaySupportImage
       }
     }
   },

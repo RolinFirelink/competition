@@ -4,7 +4,7 @@
     <div class="about-content">
       <div class="avatar-container">
         <img 
-          src="/src/assets/images/avatar.jpg" 
+          :src="avatarImage" 
           alt="每日一灯头像" 
           class="avatar"
           @error="handleImageError"
@@ -29,8 +29,16 @@
 </template>
 
 <script>
+// 正确导入图片资源，确保Vite能够处理
+import avatarImage from '/src/assets/images/avatar.jpg'
+
 export default {
   name: 'AboutMe',
+  data() {
+    return {
+      avatarImage: avatarImage
+    }
+  },
   methods: {
     handleImageError(event) {
       // 如果头像加载失败，使用默认头像

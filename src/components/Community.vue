@@ -18,7 +18,7 @@
           <h4>微信群</h4>
           <div class="qr-image" @click="showImageModal('wechat')">
             <img 
-              src="https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/20250802174708.png"
+              :src="qrImages.wechat"
               alt="微信群二维码"
               @error="handleImageError"
             />
@@ -30,7 +30,7 @@
           <h4>QQ群</h4>
           <div class="qr-image" @click="showImageModal('qq')">
             <img 
-              src="https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/20250802174811.png"
+              :src="qrImages.qq"
               alt="QQ群二维码"
               @error="handleImageError"
             />
@@ -52,6 +52,9 @@
 
 <script>
 import ImageModal from './ImageModal.vue'
+// 正确导入图片资源，确保Vite能够处理
+import wechatQrImage from '/src/assets/images/wechat-qr.jpg'
+import qqQrImage from '/src/assets/images/qq-qr.jpg'
 
 export default {
   name: 'Community',
@@ -64,8 +67,8 @@ export default {
       modalImageSrc: '',
       modalImageAlt: '',
       qrImages: {
-        wechat: 'https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/20250802174708.png',
-        qq: 'https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/20250802174811.png'
+        wechat: wechatQrImage,
+        qq: qqQrImage
       }
     }
   },

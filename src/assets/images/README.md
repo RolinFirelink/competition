@@ -1,30 +1,44 @@
 # 图片资源目录
 
-这个目录用于存放博客的静态图片资源。
+这个目录用于存放博客的静态图片资源。所有OSS图片链接已替换为本地图片路径。
 
-## 需要的图片文件
+## 必需的图片文件
 
-1. `avatar.jpg` - 博主头像（120x120px）
-2. `community.jpg` - 格斗游戏社区头像（60x60px）
+### 1. 头像图片
+- `avatar.jpg` - 博主头像（建议尺寸：120x120px，格式：JPG）
+
+### 2. 交流群组件 (Community.vue)
+- `wechat-qr.jpg` - 微信群二维码（建议尺寸：200x200px，格式：JPG/PNG）
+- `qq-qr.jpg` - QQ群二维码（建议尺寸：200x200px，格式：JPG/PNG）
+
+### 3. 支持主包组件 (Support.vue)
+- `wechat-support.jpg` - 微信赞赏码（建议尺寸：200x200px，格式：JPG/PNG）
+- `alipay-support.jpg` - 支付宝收款码（建议尺寸：200x200px，格式：JPG/PNG）
+
+### 4. 必看视频组件 (MustWatch.vue)
+- `video-thumbnail-1.jpg` - 解说精彩对局缩略图（建议尺寸：300x168px，格式：JPG）
+- `video-thumbnail-2.jpg` - 纯净精彩对局缩略图（建议尺寸：300x168px，格式：JPG）
+- `video-thumbnail-3.jpg` - 超唐对局解说缩略图（建议尺寸：300x168px，格式：JPG）
+
+## 图片规格建议
+
+| 图片类型 | 建议尺寸 | 格式 | 用途 |
+|---------|---------|------|------|
+| 头像 | 120x120px | JPG | 博主头像显示 |
+| 二维码 | 200x200px | JPG/PNG | 微信群、QQ群二维码 |
+| 赞赏码 | 200x200px | JPG/PNG | 微信、支付宝收款码 |
+| 视频缩略图 | 300x168px | JPG | 视频列表缩略图 |
 
 ## 图片替换说明
 
-- 头像图片：将你的头像文件重命名为 `avatar.jpg` 并放置在此目录
-- 其他图片：将相应的图片文件放置在此目录，并在组件中更新路径
+1. **准备图片文件**：按照上述规格准备对应的图片文件
+2. **重命名文件**：将图片文件重命名为对应的文件名
+3. **放置文件**：将所有图片文件放置在此目录下
+4. **测试显示**：启动项目检查图片是否正确显示
 
-## OSS图片链接
+## 注意事项
 
-以下组件中的图片链接需要替换为实际的OSS地址：
-
-1. **交流群组件** (`Community.vue`)：
-   - 微信群二维码：`https://example.com/wechat-qr.jpg`
-   - QQ群二维码：`https://example.com/qq-qr.jpg`
-
-2. **支持主包组件** (`Support.vue`)：
-   - 微信赞赏码：`https://example.com/wechat-support.jpg`
-   - 支付宝收款码：`https://example.com/alipay-support.jpg`
-
-3. **必看视频组件** (`MustWatch.vue`)：
-   - 视频缩略图：`https://example.com/video1-thumb.jpg` 等
-
-请将这些示例链接替换为你的实际OSS图片地址。 
+- 所有图片路径已在组件中配置为本地路径
+- 图片加载失败时会显示默认占位图
+- 建议使用压缩后的图片文件以提升加载速度
+- 确保图片文件格式和尺寸符合建议规格 
