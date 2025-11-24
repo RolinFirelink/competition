@@ -1,21 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UserFront from '../components/UserFront.vue'
-import AdminBack from '../components/AdminBack.vue'
+import Resume from '../components/Resume.vue'
 
 const routes = [
   {
     path: '/',
-    redirect: '/user'
-  },
-  {
-    path: '/user',
-    name: 'UserFront',
-    component: UserFront
-  },
-  {
-    path: '/meiriyidengdehoutai',
-    name: 'AdminBack',
-    component: AdminBack
+    name: 'Resume',
+    component: Resume
   }
 ]
 
