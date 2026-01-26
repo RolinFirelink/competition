@@ -48,7 +48,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(participant, index) in participants" :key="index">
+          <tr v-for="(participant, index) in reversedParticipants" :key="index">
             <td>{{ participant.nickname }}</td>
             <td>{{ participant.id }}</td>
             <td>{{ participant.deposit }}</td>
@@ -191,14 +191,54 @@ export default {
           deposit: '已缴纳'
         },
         {
-          nickname: ':内裤假面蹲厕所（拉斯特炫）',
+          nickname: '内裤假面蹲厕所（拉斯特炫）',
           id: '4217330893',
           deposit: '已缴纳'
         },
+        {
+          nickname: '情绪动物',
+          id: '2280976518',
+          deposit: '已缴纳'
+        },
+        {
+          nickname: '伊卡洛斯',
+          id: '2188958880',
+          deposit: '已缴纳'
+        },
+        {
+          nickname: '不如回家吃鸡翅',
+          id: '3538824011',
+          deposit: '已缴纳'
+        },
+        {
+          nickname: 'JoJo',
+          id: '1934089790',
+          deposit: '已缴纳'
+        },
+        {
+          nickname: '想成为超级升龙拳高手',
+          id: '1305801683',
+          deposit: '已缴纳'
+        },
+        {
+          nickname: '杰米爱喝酒',
+          id: '3224382623',
+          deposit: '已缴纳'
+        },
+        {
+          nickname: 'AAA不吃香菜的张斌',
+          id: '3327401795',
+          deposit: '已缴纳'
+        },
       ]
+    };
+  },
+  computed: {
+    reversedParticipants() {
+      return [...this.participants].reverse();
     }
   }
-}
+};
 </script>
 
 <style scoped>
