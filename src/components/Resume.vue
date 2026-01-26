@@ -45,6 +45,7 @@
             <th>街霸昵称</th>
             <th>街霸ID</th>
             <th>保证金去向</th>
+            <th>段位</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +53,7 @@
             <td>{{ participant.nickname }}</td>
             <td>{{ participant.id }}</td>
             <td>{{ participant.deposit }}</td>
+            <td>{{ participant.rank }}</td>
           </tr>
         </tbody>
       </table>
@@ -68,167 +70,296 @@ export default {
         {
           nickname: 'linrichu',
           id: '3062933800',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '我家猫会流氓后空翻夹头',
           id: '2783676023',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: 'M别打了别打了M',
           id: '3272404266',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '若有聲聞者盡皆斬落斷魂於此',
           id: '3576414025',
-          deposit: '已免费'
+          deposit: '已免费',
+          rank: '负分大师'
         },
         {
           nickname: '红色流浪星',
           id: '3498125113',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
-          nickname: '胆小的阿烙',
-          id: '3538353124',
-          deposit: '已缴纳'
+          nickname: '一等情事',
+          id: '1739018635',
+          deposit: '已缴纳',
+          rank: '正分大师'
         },
         {
           nickname: '两仪未来',
           id: '3876379621',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: 'AOZaki',
           id: '3431187004',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '正分大师'
         },
         {
           nickname: 'Riven',
           id: '2696437313',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '左眼下起雨',
           id: '4226859931',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '钻石'
         },
         {
           nickname: '我菜我不难受吗',
           id: '3766826973',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '拉面馒头',
           id: '3753462047',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '白金'
         },
         {
           nickname: '历战街霸金狮子',
           id: '2662803340',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '新手'
         },
         {
           nickname: 'chilleroo',
           id: '1897981597',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '鱼见千寻',
           id: '2177871520',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '也许不是不开心',
           id: '3791128655',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: 'Farid',
           id: '4282409574',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '白金'
         },
         {
           nickname: 'AzS_绕远路 才是最短的捷径',
           id: '1315717156',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '我是一个超级大狗腿子',
           id: '1314720339',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '胆小的阿烙',
           id: '3538353124',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '白金'
         },
         {
           nickname: '喜欢罐罐',
           id: '1324496630',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '正分大师'
         },
         {
           nickname: '意墨要起飞',
           id: '2171623952',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '正分大师'
         },
         {
           nickname: 'SiegeCascade',
           id: '1083334838',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '正分大师'
         },
         {
           nickname: '长征永弓使',
           id: '1370458191',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '白银'
         },
         {
           nickname: 'ZZ_yang',
           id: '2392005061',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '内裤假面蹲厕所（拉斯特炫）',
           id: '4217330893',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '情绪动物',
           id: '2280976518',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '钻石'
         },
         {
           nickname: '伊卡洛斯',
           id: '2188958880',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
         {
           nickname: '不如回家吃鸡翅',
           id: '3538824011',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '黄金'
         },
         {
           nickname: 'JoJo',
           id: '1934089790',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '钻石'
         },
         {
           nickname: '想成为超级升龙拳高手',
           id: '1305801683',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '正分大师'
         },
         {
           nickname: '杰米爱喝酒',
           id: '3224382623',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '白金'
         },
         {
           nickname: 'AAA不吃香菜的张斌',
           id: '3327401795',
-          deposit: '已缴纳'
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '西兰麻花',
+          id: '2406625831',
+          deposit: '已缴纳',
+          rank: '黄金'
+        },
+        {
+          nickname: 'Sakura02',
+          id: '2354283833',
+          deposit: '已缴纳',
+          rank: '正分大师'
+        },
+        {
+          nickname: '我要成为打差合高手',
+          id: '1476349941',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '中二的大黑',
+          id: '1254795536',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '你比我更龙',
+          id: '2545472433',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '遇木木.',
+          id: '4221833114',
+          deposit: '已缴纳',
+          rank: '正分大师'
+        },
+        {
+          nickname: '渊渟岳峙',
+          id: '2964463762',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'Ziyang',
+          id: '1162911699',
+          deposit: '已缴纳',
+          rank: '钻石'
+        },
+        {
+          nickname: '布洛芬缓释胶囊',
+          id: '1097734803',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'zHnnnnnG',
+          id: '4067095830',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: 'THE KING OF MAI',
+          id: '2527493937',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: 'AstraStranger',
+          id: '3717665799',
+          deposit: '已缴纳',
+          rank: '正分大师'
+        },
+        {
+          nickname: '学外语好啊，外语得学',
+          id: '4232499204',
+          deposit: '已缴纳',
+          rank: '正分大师'
+        },
+        {
+          nickname: 'Forging',
+          id: '1829183625',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '梅子青时节',
+          id: '1106590645',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '宇哥薄纱小杰',
+          id: '2158541130',
+          deposit: '已缴纳',
+          rank: '负分大师'
         },
       ]
     };
@@ -459,4 +590,3 @@ export default {
   }
 }
 </style>
-
