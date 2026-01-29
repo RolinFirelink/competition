@@ -32,8 +32,11 @@
       </div>
     </div>
     <div class="round1-wrapper">
-      <div class="round1-title">📋 第一轮赛事名单</div>
+      <div class="round1-title">📋 淘汰赛第一轮名单</div>
       <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
         <table class="round1-table">
           <thead>
             <tr>
@@ -44,82 +47,79 @@
           </thead>
           <tbody>
             <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(0,4)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第一组</td>
-            </tr>
             <!-- 第二组 -->
+            <tr class="group-row">
+              <td colspan="3">第二组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(4,8)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第二组</td>
-            </tr>
             <!-- 第三组 -->
+            <tr class="group-row">
+              <td colspan="3">第三组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(8,12)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第三组</td>
-            </tr>
             <!-- 第四组 -->
+            <tr class="group-row">
+              <td colspan="3">第四组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(12,16)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第四组</td>
-            </tr>
             <!-- 第五组 -->
+            <tr class="group-row">
+              <td colspan="3">第五组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(16,20)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第五组</td>
-            </tr>
             <!-- 第六组 -->
+            <tr class="group-row">
+              <td colspan="3">第六组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(20,24)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第六组</td>
-            </tr>
             <!-- 第七组 -->
+            <tr class="group-row">
+              <td colspan="3">第七组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(24,28)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第七组</td>
-            </tr>
             <!-- 第八组 -->
+            <tr class="group-row">
+              <td colspan="3">第八组</td>
+            </tr>
             <tr v-for="match in round1Matches.slice(28,32)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
-            <tr class="group-row">
-              <td colspan="3">第八组</td>
-            </tr>
           </tbody>
         </table>
-        <div class="round1-note">
-          💡 每四行四行分批打，每个人有三分钟的迟到时间，特殊情况延后到五分钟。
-        </div>
       </div>
     </div>
     <div class="rules-wrapper">
