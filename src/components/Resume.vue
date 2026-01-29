@@ -31,6 +31,81 @@
         </div>
       </div>
     </div>
+    <div class="rules-wrapper">
+      <div class="rules-title">📋 赛事规则</div>
+      <div class="rules-content">
+        <div class="rules-section">
+          <h3 class="section-title">一、比赛概况</h3>
+          <div class="section-content">
+            <p><strong>总人数：</strong>68人</p>
+            <p><strong>种子选手（4人）：</strong>罐罐、AOZaki、学外语好啊外语得学、SiegeCascade</p>
+            <p class="highlight-text">→ 直接进入八强，无需参加淘汰赛。</p>
+            <p>剩余64人通过淘汰赛决出另外4个八强名额。</p>
+          </div>
+        </div>
+
+        <div class="rules-section">
+          <h3 class="section-title">二、赛制说明</h3>
+          <div class="section-content">
+            <div class="subsection">
+              <h4 class="subsection-title">淘汰赛阶段（64进4）</h4>
+              <ul class="rules-list">
+                <li>每轮按当前段位重新匹配（强对强，弱对弱）</li>
+                <li>采用分组对战，8人同时进行</li>
+                <li>抢2胜利（先赢2局者晋级）</li>
+                <li>每轮必须使用同一角色，不可更换</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <h4 class="subsection-title">八强及之后</h4>
+              <ul class="rules-list">
+                <li>4名晋级者随机与4名种子选手匹配</li>
+                <li><strong>八强：</strong>抢3胜利</li>
+                <li><strong>四强：</strong>抢3胜利</li>
+                <li><strong>决赛：</strong>抢5胜利</li>
+                <li>八强起每局败者可更换角色</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rules-section">
+          <h3 class="section-title">三、重要规则</h3>
+          <div class="section-content">
+            <ul class="rules-list">
+              <li><strong>签到与迟到：</strong>每场开始前会在群内通知，选手有3分钟准备时间。超时无理由视为弃赛，对手晋级，保证金计入冠军奖池。特殊情况可延至5分钟。</li>
+              <li><strong>网络与掉线：</strong>选手需确保网络稳定，建议使用加速器。对局中掉线方判负。</li>
+              <li><strong>角色限制：</strong>淘汰赛阶段不可换角色；八强起可更换。</li>
+              <li><strong>结果反馈：</strong>每场比赛后需立即在群内上报结果，以便安排后续赛程。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rules-section">
+          <h3 class="section-title">四、奖金与奖励</h3>
+          <div class="section-content">
+            <ul class="rules-list">
+              <li><strong>冠军：</strong>50元现金 + 小孩签名版启明星手柄</li>
+              <li><strong>幸运奖（抽奖）：</strong>除冠军外，所有参赛者可抽中签名手柄（比赛结束后抽取）</li>
+              <li><strong>保证金退还：</strong>赛后3天内发收款码退还，逾期未发则保证金计入奖金池</li>
+              <li>若奖金池有余，将通过投票的最终方式分配</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rules-section">
+          <h3 class="section-title">五、注意事项</h3>
+          <div class="section-content">
+            <ul class="rules-list">
+              <li>不设亚军赛</li>
+              <li>比赛结束后请关注群内通知，及时提交收款码</li>
+              <li>如有疑问，请在赛前提出</li>
+            </ul>
+            <p class="rules-wish">祝各位比赛顺利！</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="stats-wrapper">
       <div class="stats-content">
         <span class="stats-label">参赛人数：</span>
@@ -125,7 +200,7 @@ export default {
           nickname: '左眼下起雨',
           id: '4226859931',
           deposit: '已缴纳',
-          rank: '钻石'
+          rank: '负分大师'
         },
         {
           nickname: '我菜我不难受吗',
@@ -361,6 +436,120 @@ export default {
           deposit: '已缴纳',
           rank: '负分大师'
         },
+        {
+          nickname: '无敌小塔',
+          id: '1617883033',
+          deposit: '已缴纳',
+          rank: '钻石'
+        },
+        {
+          nickname: 'N1ko',
+          id: '3512735486',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '三次回绝刘亦菲',
+          id: '3446561559',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'ANDY',
+          id: '1406520717',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '路易十二',
+          id: '1626273883',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '|背手摔',
+          id: '1561569085',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'windgrin',
+          id: '2355954159',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'Rzez',
+          id: '1541237644',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'Mark',
+          id: '1895673609',
+          deposit: '已缴纳',
+          rank: '正分大师'
+        },
+        {
+          nickname: 'M1rAgE',
+          id: '4188692058',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'mocurrey',
+          id: '1377614202',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'GDTT',
+          id: '4080817483',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '永雏白给大王',
+          id: '3070929526',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '打不过你你还羞辱我是什么意思',
+          id: '3325554957',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'RYWWWWY',
+          id: '1109544551',
+          deposit: '已缴纳',
+          rank: '黑铁'
+        },
+        {
+          nickname: '权御天下',
+          id: '1475709404',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '我便繁花似锦',
+          id: '1284533117',
+          deposit: '已缴纳',
+          rank: '白银'
+        },
+        {
+          nickname: '佐仓杏子',
+          id: '2955418771',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '特瑞萌新FANG',
+          id: '2953793950',
+          deposit: '已缴纳',
+          rank: '钻石'
+        },
       ]
     };
   },
@@ -450,6 +639,127 @@ export default {
   font-size: 14px;
   color: #555555;
   line-height: 1.6;
+}
+
+.rules-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.rules-title {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.rules-content {
+  padding: 24px;
+}
+
+.rules-section {
+  margin-bottom: 28px;
+}
+
+.rules-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-content {
+  color: #333333;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.section-content p {
+  margin: 8px 0;
+}
+
+.section-content p:first-child {
+  margin-top: 0;
+}
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-text {
+  color: #f5576c;
+  font-weight: 500;
+  padding-left: 12px;
+  border-left: 3px solid #f5576c;
+  margin: 12px 0 !important;
+}
+
+.subsection {
+  margin-bottom: 20px;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555555;
+  margin: 0 0 12px 0;
+}
+
+.rules-list {
+  margin: 12px 0;
+  padding-left: 24px;
+  list-style-type: none;
+}
+
+.rules-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.7;
+}
+
+.rules-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f5576c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rules-list li:last-child {
+  margin-bottom: 0;
+}
+
+.rules-list li strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.rules-wish {
+  margin-top: 20px !important;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f5576c;
+  padding: 12px;
+  background-color: #fff5f7;
+  border-radius: 6px;
 }
 
 .stats-wrapper {
@@ -565,6 +875,48 @@ export default {
   .announcement-note {
     font-size: 13px;
     padding: 10px 12px;
+  }
+
+  .rules-title {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+
+  .rules-content {
+    padding: 16px;
+  }
+
+  .rules-section {
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .section-content {
+    font-size: 14px;
+  }
+
+  .subsection-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .rules-list {
+    padding-left: 20px;
+  }
+
+  .rules-list li {
+    padding-left: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .rules-wish {
+    font-size: 15px;
+    padding: 10px;
   }
 
   .stats-wrapper {
