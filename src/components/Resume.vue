@@ -31,6 +31,27 @@
         </div>
       </div>
     </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 第一轮赛事名单</div>
+      <div class="round1-content">
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="match in round1Matches" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <div class="rules-wrapper">
       <div class="rules-title">📋 赛事规则</div>
       <div class="rules-content">
@@ -550,6 +571,40 @@ export default {
           deposit: '已缴纳',
           rank: '钻石'
         },
+      ],
+      round1Matches: [
+        { id: 1, playerA: '历战街霸金狮子', playerB: 'RYWWWWY' },
+        { id: 2, playerA: '我便繁花似锦', playerB: '长征永弓使' },
+        { id: 3, playerA: '西兰麻花', playerB: '不如回家吃鸡翅' },
+        { id: 4, playerA: 'N1ko', playerB: '梅子青时节' },
+        { id: 5, playerA: 'Forging', playerB: 'THE KING OF MAI' },
+        { id: 6, playerA: 'zHnnnnnG', playerB: '你比我更龙' },
+        { id: 7, playerA: '中二的大黑', playerB: 'AAA不吃香菜的张斌' },
+        { id: 8, playerA: '杰米爱喝酒', playerB: '胆小的阿烙' },
+        { id: 9, playerA: 'Farid', playerB: '拉面馒头' },
+        { id: 10, playerA: '特瑞萌新FANG', playerB: '无敌小塔' },
+        { id: 11, playerA: 'Ziyang', playerB: 'JoJo' },
+        { id: 12, playerA: 'Mark', playerB: 'AstraStranger' },
+        { id: 13, playerA: '遇木木.', playerB: 'Sakura02' },
+        { id: 14, playerA: '想成为超级升龙拳高手', playerB: '意墨要起飞' },
+        { id: 15, playerA: '情绪动物', playerB: '佐仓杏子' },
+        { id: 16, playerA: '一等情事', playerB: '权御天下' },
+        { id: 17, playerA: '打不过你你还羞辱我是什么意思', playerB: '永雏白给大王' },
+        { id: 18, playerA: 'GDTT', playerB: 'mocurrey' },
+        { id: 19, playerA: 'M1rAgE', playerB: 'Rzez' },
+        { id: 20, playerA: 'windgrin', playerB: '|背手摔' },
+        { id: 21, playerA: '路易十二', playerB: 'ANDY' },
+        { id: 22, playerA: '三次回绝刘亦菲', playerB: '宇哥薄纱小杰' },
+        { id: 23, playerA: '布洛芬缓释胶囊', playerB: '渊渟岳峙' },
+        { id: 24, playerA: '我要成为打差合高手', playerB: '伊卡洛斯' },
+        { id: 25, playerA: '内裤假面蹲厕所（拉斯特炫）', playerB: 'ZZ_yang' },
+        { id: 26, playerA: '我是一个超级大狗腿子', playerB: 'AzS_绕远路 才是最短的捷径' },
+        { id: 27, playerA: '也许不是不开心', playerB: '鱼见千寻' },
+        { id: 28, playerA: 'chilleroo', playerB: '我菜我不难受吗' },
+        { id: 29, playerA: '左眼下起雨', playerB: 'Riven' },
+        { id: 30, playerA: '两仪未来', playerB: '红色流浪星' },
+        { id: 31, playerA: '若有聲聞者盡皆斬落斷魂於此', playerB: 'M别打了别打了M' },
+        { id: 32, playerA: '我家猫会流氓后空翻夹头', playerB: 'linrichu' }
       ]
     };
   },
@@ -639,6 +694,67 @@ export default {
   font-size: 14px;
   color: #555555;
   line-height: 1.6;
+}
+
+.round1-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.round1-title {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.round1-content {
+  padding: 24px;
+}
+
+.round1-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.round1-table thead {
+  background-color: #f5f5f5;
+}
+
+.round1-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.round1-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+}
+
+.round1-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.round1-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.round1-table td {
+  padding: 16px 20px;
+  color: #333333;
+}
+
+.round1-table td:first-child {
+  font-weight: 500;
 }
 
 .rules-wrapper {
@@ -875,6 +991,24 @@ export default {
   .announcement-note {
     font-size: 13px;
     padding: 10px 12px;
+  }
+
+  .round1-title {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+
+  .round1-content {
+    padding: 16px;
+  }
+
+  .round1-table {
+    font-size: 14px;
+  }
+
+  .round1-table th,
+  .round1-table td {
+    padding: 12px 10px;
   }
 
   .rules-title {
