@@ -125,7 +125,7 @@ export default {
           nickname: '左眼下起雨',
           id: '4226859931',
           deposit: '已缴纳',
-          rank: '钻石'
+          rank: '负分大师'
         },
         {
           nickname: '我菜我不难受吗',
@@ -360,6 +360,120 @@ export default {
           id: '2158541130',
           deposit: '已缴纳',
           rank: '负分大师'
+        },
+        {
+          nickname: '无敌小塔',
+          id: '1617883033',
+          deposit: '已缴纳',
+          rank: '钻石'
+        },
+        {
+          nickname: 'N1ko',
+          id: '3512735486',
+          deposit: '已缴纳',
+          rank: '白金'
+        },
+        {
+          nickname: '三次回绝刘亦菲',
+          id: '3446561559',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'ANDY',
+          id: '1406520717',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '路易十二',
+          id: '1626273883',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '|背手摔',
+          id: '1561569085',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'windgrin',
+          id: '2355954159',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'Rzez',
+          id: '1541237644',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'Mark',
+          id: '1895673609',
+          deposit: '已缴纳',
+          rank: '正分大师'
+        },
+        {
+          nickname: 'M1rAgE',
+          id: '4188692058',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'mocurrey',
+          id: '1377614202',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'GDTT',
+          id: '4080817483',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '永雏白给大王',
+          id: '3070929526',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '打不过你你还羞辱我是什么意思',
+          id: '3325554957',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: 'RYWWWWY',
+          id: '1109544551',
+          deposit: '已缴纳',
+          rank: '黑铁'
+        },
+        {
+          nickname: '权御天下',
+          id: '1475709404',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '我便繁花似锦',
+          id: '1284533117',
+          deposit: '已缴纳',
+          rank: '白银'
+        },
+        {
+          nickname: '佐仓杏子',
+          id: '2955418771',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '特瑞萌新FANG',
+          id: '2953793950',
+          deposit: '已缴纳',
+          rank: '钻石'
         },
       ]
     };
