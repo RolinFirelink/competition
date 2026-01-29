@@ -43,13 +43,83 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="match in round1Matches" :key="match.id">
+            <!-- 第一组 -->
+            <tr v-for="match in round1Matches.slice(0,4)" :key="match.id">
               <td>{{ match.id }}</td>
               <td>{{ match.playerA }}</td>
               <td>{{ match.playerB }}</td>
             </tr>
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <!-- 第二组 -->
+            <tr v-for="match in round1Matches.slice(4,8)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第二组</td>
+            </tr>
+            <!-- 第三组 -->
+            <tr v-for="match in round1Matches.slice(8,12)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第三组</td>
+            </tr>
+            <!-- 第四组 -->
+            <tr v-for="match in round1Matches.slice(12,16)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第四组</td>
+            </tr>
+            <!-- 第五组 -->
+            <tr v-for="match in round1Matches.slice(16,20)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第五组</td>
+            </tr>
+            <!-- 第六组 -->
+            <tr v-for="match in round1Matches.slice(20,24)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第六组</td>
+            </tr>
+            <!-- 第七组 -->
+            <tr v-for="match in round1Matches.slice(24,28)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第七组</td>
+            </tr>
+            <!-- 第八组 -->
+            <tr v-for="match in round1Matches.slice(28,32)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <tr class="group-row">
+              <td colspan="3">第八组</td>
+            </tr>
           </tbody>
         </table>
+        <div class="round1-note">
+          💡 每四行四行分批打，每个人有三分钟的迟到时间，特殊情况延后到五分钟。
+        </div>
       </div>
     </div>
     <div class="rules-wrapper">
@@ -757,6 +827,24 @@ export default {
   font-weight: 500;
 }
 
+.group-row {
+  background-color: #f9f9f9;
+  font-weight: 500;
+  text-align: center;
+  color: #333333;
+}
+
+.round1-note {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background-color: #f0f4ff;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+}
+
 .rules-wrapper {
   background-color: #ffffff;
   border-radius: 8px;
@@ -1009,6 +1097,16 @@ export default {
   .round1-table th,
   .round1-table td {
     padding: 12px 10px;
+  }
+
+  .group-row {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+
+  .round1-note {
+    font-size: 13px;
+    padding: 10px 12px;
   }
 
   .rules-title {
