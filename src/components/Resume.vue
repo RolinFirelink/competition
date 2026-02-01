@@ -1,14 +1,14 @@
 <template>
   <div class="registration-container">
     <div class="header">
-      <h1>1月31日杯赛报名情况</h1>
+      <h1>2026年1月31日杯赛报名情况</h1>
     </div>
     <div class="announcement-wrapper">
       <div class="announcement-title">📢 赛事公告</div>
       <div class="announcement-content">
         <div class="announcement-item">
           <span class="item-label">开赛时间：</span>
-          <span class="item-value">1月31日下午两点</span>
+          <span class="item-value">2026年1月31日下午两点</span>
         </div>
         <div class="announcement-item">
           <span class="item-label">报名方式：</span>
