@@ -72,21 +72,8 @@ export default {
   margin: 0 auto;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #ffffff;
   position: relative;
-}
-
-.competition-list-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .hero-section {
@@ -94,20 +81,20 @@ export default {
   text-align: center;
   position: relative;
   z-index: 1;
+  background-color: #ffffff;
 }
 
 .header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #ffffff;
+  color: #2c3e50;
   margin: 0 0 12px 0;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   letter-spacing: -1px;
 }
 
 .subtitle {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #666666;
   margin: 0;
   font-weight: 400;
 }

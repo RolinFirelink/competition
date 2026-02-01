@@ -31,6 +31,16 @@
         </div>
       </div>
     </div>
+    <div class="replay-wrapper">
+      <div class="replay-title">📺 赛事全程回放</div>
+      <div class="replay-content">
+        <a :href="replayUrl" target="_blank" class="replay-link" rel="noopener noreferrer">
+          <span class="replay-icon">▶️</span>
+          <span class="replay-text">点击观看B站全程回放</span>
+          <span class="replay-arrow">→</span>
+        </a>
+      </div>
+    </div>
     <div class="champion-wrapper">
       <div class="champion-title">🏆 冠军</div>
       <div class="champion-content">
@@ -890,6 +900,7 @@ export default {
         },
       ],
       champion: '学外语好啊外语得学',
+      replayUrl: 'https://www.bilibili.com/video/BV15R6JBUEyv/?spm_id_from=333.337.search-card.all.click&vd_source=eb48b40a0ac8610fb2a9c4b62b48f570',
       luckyPrizeWinner: '永雏白给大王',
       luckyGoldWinner: 'mocurrey',
       finalMatches: [
