@@ -984,18 +984,8 @@ export default {
 </script>
 
 <style scoped>
-.registration-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  min-height: 100vh;
-  background-color: #fafafa;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-}
+@import '../assets/styles/competition.css';
+</style>
 
 .header h1 {
   font-size: 32px;
