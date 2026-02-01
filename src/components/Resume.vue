@@ -481,19 +481,19 @@ export default {
         {
           nickname: 'linrichu',
           id: '3062933800',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '我家猫会流氓后空翻夹头',
           id: '2783676023',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: 'M别打了别打了M',
           id: '3272404266',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -505,19 +505,19 @@ export default {
         {
           nickname: '红色流浪星',
           id: '3498125113',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '一等情事',
           id: '1739018635',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
           nickname: '两仪未来',
           id: '3876379621',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -529,19 +529,19 @@ export default {
         {
           nickname: 'Riven',
           id: '2696437313',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '左眼下起雨',
           id: '4226859931',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '我菜我不难受吗',
           id: '3766826973',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -553,25 +553,25 @@ export default {
         {
           nickname: '历战街霸金狮子',
           id: '2662803340',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '新手'
         },
         {
           nickname: 'chilleroo',
           id: '1897981597',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '鱼见千寻',
           id: '2177871520',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '也许不是不开心',
           id: '3791128655',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -583,7 +583,7 @@ export default {
         {
           nickname: 'AzS_绕远路 才是最短的捷径',
           id: '1315717156',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -601,7 +601,7 @@ export default {
         {
           nickname: '喜欢罐罐',
           id: '1324496630',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
@@ -613,13 +613,13 @@ export default {
         {
           nickname: 'SiegeCascade',
           id: '1083334838',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
           nickname: '长征永弓使',
           id: '1370458191',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白银'
         },
         {
@@ -631,7 +631,7 @@ export default {
         {
           nickname: '内裤假面蹲厕所（拉斯特炫）',
           id: '4217330893',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -655,7 +655,7 @@ export default {
         {
           nickname: 'JoJo',
           id: '1934089790',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '钻石'
         },
         {
@@ -667,25 +667,25 @@ export default {
         {
           nickname: '杰米爱喝酒',
           id: '3224382623',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白金'
         },
         {
           nickname: 'AAA不吃香菜的张斌',
           id: '3327401795',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白金'
         },
         {
           nickname: '西兰麻花',
           id: '2406625831',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '黄金'
         },
         {
           nickname: 'Sakura02',
           id: '2354283833',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
@@ -703,13 +703,13 @@ export default {
         {
           nickname: '你比我更龙',
           id: '2545472433',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白金'
         },
         {
           nickname: '遇木木.',
           id: '4221833114',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
@@ -721,37 +721,37 @@ export default {
         {
           nickname: 'Ziyang',
           id: '1162911699',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '钻石'
         },
         {
           nickname: '布洛芬缓释胶囊',
           id: '1097734803',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: 'zHnnnnnG',
           id: '4067095830',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白金'
         },
         {
           nickname: 'THE KING OF MAI',
           id: '2527493937',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白金'
         },
         {
           nickname: 'AstraStranger',
           id: '3717665799',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
           nickname: '学外语好啊，外语得学',
           id: '4232499204',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
@@ -763,13 +763,13 @@ export default {
         {
           nickname: '梅子青时节',
           id: '1106590645',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '白金'
         },
         {
           nickname: '宇哥薄纱小杰',
           id: '2158541130',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -793,25 +793,25 @@ export default {
         {
           nickname: 'ANDY',
           id: '1406520717',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '路易十二',
           id: '1626273883',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '|背手摔',
           id: '1561569085',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: 'windgrin',
           id: '2355954159',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
@@ -823,7 +823,7 @@ export default {
         {
           nickname: 'Mark',
           id: '1895673609',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '正分大师'
         },
         {
@@ -835,31 +835,31 @@ export default {
         {
           nickname: 'mocurrey',
           id: '1377614202',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: 'GDTT',
           id: '4080817483',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '永雏白给大王',
           id: '3070929526',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '打不过你你还羞辱我是什么意思',
           id: '3325554957',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: 'RYWWWWY',
           id: '1109544551',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '黑铁'
         },
         {
@@ -877,13 +877,13 @@ export default {
         {
           nickname: '佐仓杏子',
           id: '2955418771',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '负分大师'
         },
         {
           nickname: '特瑞萌新FANG',
           id: '2953793950',
-          deposit: '已退回',
+          deposit: '已缴纳',
           rank: '钻石'
         },
         {
