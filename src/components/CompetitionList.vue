@@ -9,6 +9,8 @@
           <div class="competition-date">{{ competition.date }}</div>
           <div class="competition-title">{{ competition.title }}</div>
           <div class="competition-participants">参赛人数：{{ competition.participants }}人</div>
+          <div class="competition-participants">赞助商：{{ competition.sponsor }}</div>
+          <div class="competition-participants">赞助人：{{ competition.patron }}</div>
         </router-link>
       </div>
     </div>
@@ -25,7 +27,9 @@ export default {
           path: '/20260131',
           date: '2026年1月31日',
           title: '1月31日杯赛',
-          participants: 68
+          participants: 70,
+          sponsor: '盖世小鸡',
+          patron: 'H半瓶'
         }
         // 未来可以在这里添加更多赛事
       ]
