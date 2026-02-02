@@ -1,14 +1,14 @@
 <template>
   <div class="registration-container">
     <div class="header">
-      <h1>1月31日杯赛报名情况</h1>
+      <h1>2026年1月31日杯赛报名情况</h1>
     </div>
     <div class="announcement-wrapper">
       <div class="announcement-title">📢 赛事公告</div>
       <div class="announcement-content">
         <div class="announcement-item">
           <span class="item-label">开赛时间：</span>
-          <span class="item-value">1月31日下午两点</span>
+          <span class="item-value">2026年1月31日下午两点</span>
         </div>
         <div class="announcement-item">
           <span class="item-label">报名方式：</span>
@@ -16,7 +16,7 @@
         </div>
         <div class="announcement-item">
           <span class="item-label">保证金说明：</span>
-          <span class="item-value">报名需缴纳10元保证金。正常参赛将原路退回；如鸽子，保证金将作为奖励给到赛事冠军。</span>
+          <span class="item-value">报名需缴纳10元保证金。正常参赛将原路退回；如鸽子，保证金将作为奖励给到随机一位选手。</span>
         </div>
         <div class="announcement-item">
           <span class="item-label">直播信息：</span>
@@ -29,6 +29,242 @@
         <div class="announcement-note">
           💡 本次杯赛参赛人员和保证金去向都会实时在本网站更新
         </div>
+      </div>
+    </div>
+    <div class="replay-wrapper">
+      <div class="replay-title">📺 赛事全程回放</div>
+      <div class="replay-content">
+        <a :href="replayUrl" target="_blank" class="replay-link" rel="noopener noreferrer">
+          <span class="replay-icon">▶️</span>
+          <span class="replay-text">点击观看B站全程回放</span>
+          <span class="replay-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="champion-wrapper">
+      <div class="champion-title">🏆 冠军</div>
+      <div class="champion-content">
+        <div class="champion-name">{{ champion }}</div>
+      </div>
+    </div>
+    <div class="awards-wrapper">
+      <div class="award-item">
+        <div class="award-icon">🎮</div>
+        <div class="award-info">
+          <div class="award-title">盖世小鸡启明星手柄幸运奖</div>
+          <div class="award-winner">{{ luckyPrizeWinner }}</div>
+        </div>
+      </div>
+      <div class="award-item">
+        <div class="award-icon">🎁</div>
+        <div class="award-info">
+          <div class="award-title">幸运金奖</div>
+          <div class="award-winner">{{ luckyGoldWinner }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 决赛名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <tr v-for="match in finalMatches.slice(0,4)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 四强赛名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <tr v-for="match in semiFinalsMatches.slice(0,4)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 八强赛名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <tr v-for="match in quarterFinalsMatches.slice(0,4)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 淘汰赛第四轮名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <tr v-for="match in round4Matches.slice(0,4)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 淘汰赛第三轮名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <tr v-for="match in round3Matches.slice(0,4)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <!-- 第二组 -->
+            <tr class="group-row">
+              <td colspan="3">第二组</td>
+            </tr>
+            <tr v-for="match in round3Matches.slice(4,8)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 淘汰赛第二轮名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 每组分批打，从上往下，第一组打完轮到下一组，每个人有三分钟的迟到时间，迟到算弃赛，特殊情况延后到五分钟。
+        </div>
+        <table class="round1-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>昵称A</th>
+              <th>昵称B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一组 -->
+            <tr class="group-row">
+              <td colspan="3">第一组</td>
+            </tr>
+            <tr v-for="match in round2Matches.slice(0,4)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <!-- 第二组 -->
+            <tr class="group-row">
+              <td colspan="3">第二组</td>
+            </tr>
+            <tr v-for="match in round2Matches.slice(4,8)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <!-- 第三组 -->
+            <tr class="group-row">
+              <td colspan="3">第三组</td>
+            </tr>
+            <tr v-for="match in round2Matches.slice(8,12)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+            <!-- 第四组 -->
+            <tr class="group-row">
+              <td colspan="3">第四组</td>
+            </tr>
+            <tr v-for="match in round2Matches.slice(12,16)" :key="match.id">
+              <td>{{ match.id }}</td>
+              <td>{{ match.playerA }}</td>
+              <td>{{ match.playerB }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <div class="round1-wrapper">
@@ -46,6 +282,15 @@
             </tr>
           </thead>
           <tbody>
+            <!-- 第0组 -->
+            <tr class="group-row">
+              <td colspan="3">第0组</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>刘康x嘉米是不是邪门CP</td>
+              <td>领导，我干了，你随意</td>
+            </tr>
             <!-- 第一组 -->
             <tr class="group-row">
               <td colspan="3">第一组</td>
@@ -164,7 +409,7 @@
           <h3 class="section-title">三、重要规则</h3>
           <div class="section-content">
             <ul class="rules-list">
-              <li><strong>签到与迟到：</strong>每场开始前会在群内通知，选手有3分钟准备时间。超时无理由视为弃赛，对手晋级，保证金计入冠军奖池。特殊情况可延至5分钟。</li>
+              <li><strong>签到与迟到：</strong>每场开始前会在群内通知，选手有3分钟准备时间。超时无理由视为弃赛，对手晋级，保证金计入奖池。特殊情况可延至5分钟。</li>
               <li><strong>网络与掉线：</strong>选手需确保网络稳定，建议使用加速器。对局中掉线方判负。</li>
               <li><strong>角色限制：</strong>淘汰赛阶段不可换角色；八强起可更换。</li>
               <li><strong>结果反馈：</strong>每场比赛后需立即在群内上报结果，以便安排后续赛程。</li>
@@ -512,7 +757,7 @@ export default {
         {
           nickname: 'Forging',
           id: '1829183625',
-          deposit: '已缴纳',
+          deposit: '已入池',
           rank: '白金'
         },
         {
@@ -536,7 +781,7 @@ export default {
         {
           nickname: 'N1ko',
           id: '3512735486',
-          deposit: '已缴纳',
+          deposit: '已入池',
           rank: '白金'
         },
         {
@@ -641,6 +886,69 @@ export default {
           deposit: '已缴纳',
           rank: '钻石'
         },
+        {
+          nickname: '领导，我干了，你随意',
+          id: '1683485597',
+          deposit: '已缴纳',
+          rank: '负分大师'
+        },
+        {
+          nickname: '刘康x嘉米算不算邪门CP?',
+          id: '4239997827',
+          deposit: '已免费',
+          rank: '负分大师'
+        },
+      ],
+      champion: '学外语好啊外语得学',
+      replayUrl: 'https://www.bilibili.com/video/BV15R6JBUEyv/?spm_id_from=333.337.search-card.all.click&vd_source=eb48b40a0ac8610fb2a9c4b62b48f570',
+      luckyPrizeWinner: '永雏白给大王',
+      luckyGoldWinner: 'mocurrey',
+      finalMatches: [
+        { id: 1, playerA: '学外语好啊外语得学', playerB: 'SiegeCascade' }
+      ],
+      semiFinalsMatches: [
+        { id: 1, playerA: 'Sakura02', playerB: '学外语好啊外语得学' },
+        { id: 2, playerA: 'AOZaki', playerB: 'SiegeCascade' }
+      ],
+      quarterFinalsMatches: [
+        { id: 1, playerA: '特瑞萌新FANG', playerB: 'SiegeCascade' },
+        { id: 2, playerA: '左眼下起雨', playerB: 'AOZaki' },
+        { id: 3, playerA: 'Sakura02', playerB: '喜欢罐罐' },
+        { id: 4, playerA: '领导我干了你随意', playerB: '学外语好啊外语得学' }
+      ],
+      round4Matches: [
+        { id: 1, playerA: '左眼下起雨', playerB: 'GDTT' },
+        { id: 2, playerA: '你比我更龙', playerB: '特瑞萌新FANG' },
+        { id: 3, playerA: '宇哥薄纱小杰', playerB: 'Sakura02' },
+        { id: 4, playerA: '领导，我干了，你随意', playerB: '若有声闻者' }
+      ],
+      round3Matches: [
+        { id: 1, playerA: '长征永弓使', playerB: '梅子青时节' },
+        { id: 2, playerA: '你比我更龙', playerB: '杰米爱喝酒' },
+        { id: 3, playerA: '特瑞萌新FANG', playerB: '佐仓信子' },
+        { id: 4, playerA: 'GDTT', playerB: 'windgrin' },
+        { id: 5, playerA: '宇哥薄纱小杰', playerB: '布洛芬缓释胶囊' },
+        { id: 6, playerA: '一等情事', playerB: 'Sakura02' },
+        { id: 7, playerA: '鱼见千寻', playerB: '左眼下起雨' },
+        { id: 8, playerA: '我是一个超级大狗腿子', playerB: '若有声闻者' }
+      ],
+      round2Matches: [
+        { id: 1, playerA: 'rywwwwy', playerB: '长征' },
+        { id: 2, playerA: '西兰麻花', playerB: '梅子青时节' },
+        { id: 3, playerA: 'the king of mai', playerB: '你比我更龙' },
+        { id: 4, playerA: 'AAA不吃香菜', playerB: '杰米爱喝酒' },
+        { id: 5, playerA: 'Farid', playerB: '特瑞萌新FANG' },
+        { id: 6, playerA: 'JoJo', playerB: '佐仓信子' },
+        { id: 7, playerA: '永雏白给大王', playerB: 'GDTT' },
+        { id: 8, playerA: 'M1rage', playerB: 'windgrin' },
+        { id: 9, playerA: '路易十二', playerB: '宇哥薄纱小杰' },
+        { id: 10, playerA: '布洛芬缓释胶囊', playerB: '我要成为打差合高手' },
+        { id: 11, playerA: '想成为超级升龙拳高手', playerB: '一等情事' },
+        { id: 12, playerA: '鱼见千寻', playerB: '我菜我不难受吗' },
+        { id: 13, playerA: '左眼下起雨', playerB: '红色流浪行' },
+        { id: 14, playerA: '若有声闻者', playerB: 'linrichu' },
+        { id: 15, playerA: 'AstraStranger', playerB: 'Sakura02' },
+        { id: 16, playerA: '拉斯特炫', playerB: '我是一个超级大狗腿子' }
       ],
       round1Matches: [
         { id: 1, playerA: '历战街霸金狮子', playerB: 'RYWWWWY' },
@@ -687,490 +995,5 @@ export default {
 </script>
 
 <style scoped>
-.registration-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  min-height: 100vh;
-  background-color: #fafafa;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.header h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #2c3e50;
-  margin: 0;
-}
-
-.announcement-wrapper {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.announcement-title {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 16px 24px;
-  text-align: center;
-}
-
-.announcement-content {
-  padding: 24px;
-}
-
-.announcement-item {
-  margin-bottom: 16px;
-  line-height: 1.6;
-  font-size: 15px;
-  color: #333333;
-}
-
-.announcement-item:last-of-type {
-  margin-bottom: 0;
-}
-
-.item-label {
-  font-weight: 600;
-  color: #2c3e50;
-  display: inline-block;
-  min-width: 100px;
-}
-
-.item-value {
-  color: #555555;
-}
-
-.announcement-item strong {
-  color: #667eea;
-  font-weight: 600;
-}
-
-.announcement-note {
-  margin-top: 20px;
-  padding: 12px 16px;
-  background-color: #f0f4ff;
-  border-left: 4px solid #667eea;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #555555;
-  line-height: 1.6;
-}
-
-.round1-wrapper {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.round1-title {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 16px 24px;
-  text-align: center;
-}
-
-.round1-content {
-  padding: 24px;
-}
-
-.round1-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-}
-
-.round1-table thead {
-  background-color: #f5f5f5;
-}
-
-.round1-table th {
-  padding: 16px 20px;
-  text-align: left;
-  font-weight: 600;
-  color: #2c3e50;
-  border-bottom: 2px solid #e0e0e0;
-}
-
-.round1-table tbody tr {
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.2s;
-}
-
-.round1-table tbody tr:hover {
-  background-color: #f9f9f9;
-}
-
-.round1-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.round1-table td {
-  padding: 16px 20px;
-  color: #333333;
-}
-
-.round1-table td:first-child {
-  font-weight: 500;
-}
-
-.group-row {
-  background-color: #f9f9f9;
-  font-weight: 500;
-  text-align: center;
-  color: #333333;
-}
-
-.round1-note {
-  margin-top: 20px;
-  padding: 12px 16px;
-  background-color: #f0f4ff;
-  border-left: 4px solid #667eea;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #555555;
-  line-height: 1.6;
-}
-
-.rules-wrapper {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.rules-title {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 16px 24px;
-  text-align: center;
-}
-
-.rules-content {
-  padding: 24px;
-}
-
-.rules-section {
-  margin-bottom: 28px;
-}
-
-.rules-section:last-child {
-  margin-bottom: 0;
-}
-
-.section-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #2c3e50;
-  margin: 0 0 16px 0;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.section-content {
-  color: #333333;
-  line-height: 1.8;
-  font-size: 15px;
-}
-
-.section-content p {
-  margin: 8px 0;
-}
-
-.section-content p:first-child {
-  margin-top: 0;
-}
-
-.section-content p:last-child {
-  margin-bottom: 0;
-}
-
-.highlight-text {
-  color: #f5576c;
-  font-weight: 500;
-  padding-left: 12px;
-  border-left: 3px solid #f5576c;
-  margin: 12px 0 !important;
-}
-
-.subsection {
-  margin-bottom: 20px;
-}
-
-.subsection:last-child {
-  margin-bottom: 0;
-}
-
-.subsection-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #555555;
-  margin: 0 0 12px 0;
-}
-
-.rules-list {
-  margin: 12px 0;
-  padding-left: 24px;
-  list-style-type: none;
-}
-
-.rules-list li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-  line-height: 1.7;
-}
-
-.rules-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #f5576c;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.rules-list li:last-child {
-  margin-bottom: 0;
-}
-
-.rules-list li strong {
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-.rules-wish {
-  margin-top: 20px !important;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  color: #f5576c;
-  padding: 12px;
-  background-color: #fff5f7;
-  border-radius: 6px;
-}
-
-.stats-wrapper {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  padding: 20px 24px;
-}
-
-.stats-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
-
-.stats-label {
-  color: #555555;
-  font-weight: 500;
-  margin-right: 8px;
-}
-
-.stats-value {
-  color: #667eea;
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0 4px;
-}
-
-.stats-unit {
-  color: #555555;
-  font-weight: 500;
-  margin-left: 4px;
-}
-
-.table-wrapper {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.registration-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-}
-
-.registration-table thead {
-  background-color: #f5f5f5;
-}
-
-.registration-table th {
-  padding: 16px 20px;
-  text-align: left;
-  font-weight: 600;
-  color: #2c3e50;
-  border-bottom: 2px solid #e0e0e0;
-}
-
-.registration-table tbody tr {
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.2s;
-}
-
-.registration-table tbody tr:hover {
-  background-color: #f9f9f9;
-}
-
-.registration-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.registration-table td {
-  padding: 16px 20px;
-  color: #333333;
-}
-
-.registration-table td:first-child {
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .registration-container {
-    padding: 20px 10px;
-  }
-
-  .header h1 {
-    font-size: 24px;
-  }
-
-  .announcement-title {
-    font-size: 18px;
-    padding: 12px 16px;
-  }
-
-  .announcement-content {
-    padding: 16px;
-  }
-
-  .announcement-item {
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  .item-label {
-    display: block;
-    margin-bottom: 4px;
-    min-width: auto;
-  }
-
-  .announcement-note {
-    font-size: 13px;
-    padding: 10px 12px;
-  }
-
-  .round1-title {
-    font-size: 18px;
-    padding: 12px 16px;
-  }
-
-  .round1-content {
-    padding: 16px;
-  }
-
-  .round1-table {
-    font-size: 14px;
-  }
-
-  .round1-table th,
-  .round1-table td {
-    padding: 12px 10px;
-  }
-
-  .group-row {
-    font-size: 14px;
-    padding: 12px 10px;
-  }
-
-  .round1-note {
-    font-size: 13px;
-    padding: 10px 12px;
-  }
-
-  .rules-title {
-    font-size: 18px;
-    padding: 12px 16px;
-  }
-
-  .rules-content {
-    padding: 16px;
-  }
-
-  .rules-section {
-    margin-bottom: 24px;
-  }
-
-  .section-title {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-
-  .section-content {
-    font-size: 14px;
-  }
-
-  .subsection-title {
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-
-  .rules-list {
-    padding-left: 20px;
-  }
-
-  .rules-list li {
-    padding-left: 16px;
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-
-  .rules-wish {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  .stats-wrapper {
-    padding: 16px 20px;
-    margin-bottom: 20px;
-  }
-
-  .stats-content {
-    font-size: 16px;
-  }
-
-  .stats-value {
-    font-size: 24px;
-  }
-
-  .registration-table {
-    font-size: 14px;
-  }
-
-  .registration-table th,
-  .registration-table td {
-    padding: 12px 10px;
-  }
-}
+@import '../assets/styles/competition.css';
 </style>
