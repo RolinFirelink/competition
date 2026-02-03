@@ -1,5 +1,8 @@
 <template>
   <div class="registration-container">
+    <div class="back-bar">
+      <router-link class="back-link" to="/competition">← 返回赛事中心</router-link>
+    </div>
     <div class="header">
       <h1>2026年1月31日杯赛报名情况</h1>
     </div>
@@ -996,4 +999,26 @@ export default {
 
 <style scoped>
 @import '../assets/styles/competition.css';
+
+.back-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 20px 0;
+}
+
+.back-link {
+  color: #9aa4b5;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(154, 164, 181, 0.35);
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: #dfe6ff;
+  border-color: rgba(111, 126, 255, 0.6);
+  box-shadow: 0 0 0 1px rgba(111, 126, 255, 0.25);
+}
 </style>

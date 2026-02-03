@@ -12,15 +12,14 @@ export default {
 
 <style>
 #app {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #e8ecf1;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background: #06070b;
 }
 
 * {
@@ -30,6 +29,6 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  background-color: #fafafa;
+  background-color: #06070b;
 }
-</style> 
+</style>

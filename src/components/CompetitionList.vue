@@ -1,5 +1,8 @@
 <template>
   <div class="competition-list-container">
+    <div class="top-bar">
+      <router-link class="back-link" to="/">← 返回入口</router-link>
+    </div>
     <div class="hero-section">
       <div class="header">
         <h1>🏆 赛事中心</h1>
@@ -8,7 +11,7 @@
     </div>
     <div class="competitions-wrapper">
       <div class="competition-item" v-for="competition in competitions" :key="competition.path">
-        <router-link :to="competition.path" class="competition-link">
+        <router-link :to="`/competition${competition.path}`" class="competition-link">
           <div class="competition-header">
             <div class="competition-date">{{ competition.date }}</div>
             <div class="competition-badge">已结束</div>
@@ -72,8 +75,31 @@ export default {
   margin: 0 auto;
   padding: 0;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #0c0e13;
+  color: #e8ecf1;
   position: relative;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 20px 0;
+}
+
+.back-link {
+  color: #9aa4b5;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(154, 164, 181, 0.35);
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: #dfe6ff;
+  border-color: rgba(111, 126, 255, 0.6);
+  box-shadow: 0 0 0 1px rgba(111, 126, 255, 0.25);
 }
 
 .hero-section {
@@ -81,20 +107,20 @@ export default {
   text-align: center;
   position: relative;
   z-index: 1;
-  background-color: #ffffff;
+  background-color: #0c0e13;
 }
 
 .header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #2c3e50;
+  color: #f3f6ff;
   margin: 0 0 12px 0;
   letter-spacing: -1px;
 }
 
 .subtitle {
   font-size: 18px;
-  color: #666666;
+  color: #9aa4b5;
   margin: 0;
   font-weight: 400;
 }
@@ -109,12 +135,12 @@ export default {
 }
 
 .competition-item {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(135deg, #0f1118 0%, #10131b 100%);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
 }
 
@@ -150,12 +176,12 @@ export default {
 
 .competition-date {
   font-size: 13px;
-  color: #667eea;
+  color: #9db2ff;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 6px 12px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(157, 178, 255, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
   border-radius: 20px;
   display: inline-block;
 }
@@ -165,7 +191,7 @@ export default {
   color: #ffffff;
   font-weight: 600;
   padding: 4px 12px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #ff9a9e 0%, #f5576c 100%);
   border-radius: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -174,7 +200,7 @@ export default {
 .competition-title {
   font-size: 28px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #e8ecf1;
   margin-bottom: 24px;
   line-height: 1.3;
 }
@@ -182,7 +208,7 @@ export default {
 .competition-info {
   margin-bottom: 24px;
   padding-bottom: 24px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .info-item {
@@ -190,7 +216,7 @@ export default {
   align-items: center;
   gap: 10px;
   font-size: 15px;
-  color: #555555;
+  color: #c5cad8;
 }
 
 .info-icon {
@@ -209,10 +235,9 @@ export default {
   gap: 16px;
   margin-bottom: 24px;
   padding: 20px;
-  background: linear-gradient(135deg, #fff9e6 0%, #fff5f7 100%);
-  border-radius: 16px;
-  border: 2px solid #ffd700;
-  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.15);
+  background: linear-gradient(135deg, rgba(255, 249, 230, 0.04) 0%, rgba(255, 245, 247, 0.04) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.16);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.12);
 }
 
 .sponsor-item {
@@ -220,7 +245,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 12px;
   transition: transform 0.2s ease;
 }
@@ -234,7 +260,7 @@ export default {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #666666;
+  color: #9aa4b5;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -271,15 +297,15 @@ export default {
 .view-details {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   font-size: 14px;
   font-weight: 600;
-  color: #667eea;
+  color: #9db2ff;
   transition: color 0.3s ease;
 }
 
 .competition-item:hover .view-details {
-  color: #764ba2;
+  color: #c6d2ff;
 }
 
 .view-details span {
@@ -331,4 +357,3 @@ export default {
   }
 }
 </style>
-
