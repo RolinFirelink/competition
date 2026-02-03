@@ -90,10 +90,14 @@ export default {
 <style scoped>
 .landing-page {
   min-height: 100vh;
-  background: #0b0c10;
-  color: #e8ecf1;
+  padding: 56px 32px 72px;
+  color: #e7ecf5;
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  padding: 48px 32px 64px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 99, 164, 0.14), transparent 22%),
+    radial-gradient(circle at 80% 10%, rgba(115, 174, 255, 0.14), transparent 20%),
+    radial-gradient(circle at 50% 85%, rgba(116, 255, 199, 0.08), transparent 24%),
+    linear-gradient(135deg, #0b0c14 0%, #070810 100%);
 }
 
 .hero {
@@ -103,11 +107,13 @@ export default {
 }
 
 .brand {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 800;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.2px;
   margin-bottom: 16px;
-  color: #f5f7fb;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 
 .hero-actions {
@@ -115,61 +121,79 @@ export default {
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .pill {
-  border: 1px solid #2a2d34;
-  background: linear-gradient(135deg, #15171c 0%, #101117 100%);
-  color: #9aa4b5;
-  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  color: #cfd7e6;
+  padding: 12px 22px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 }
 
 .pill.active {
-  border-color: #6c7bff;
-  color: #dfe6ff;
-  box-shadow: 0 0 0 1px rgba(108, 123, 255, 0.3);
+  border-color: rgba(255, 99, 164, 0.55);
+  color: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(255, 99, 164, 0.25),
+    0 14px 48px rgba(255, 99, 164, 0.35);
+  background: linear-gradient(135deg, #ff5c93, #6c7bff);
 }
 
 .pill.disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.55;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
 }
 
 .tagline {
   margin-top: 6px;
-  color: #8f98ad;
+  color: #b8c3d9;
+  font-weight: 600;
   font-size: 15px;
 }
 
 .ads-strip {
-  margin: 32px auto 40px;
-  max-width: 1100px;
+  margin: 36px auto 44px;
+  max-width: 1120px;
   overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid #1c1f27;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  padding: 6px 0;
 }
 
 .ads-track {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   animation: scroll var(--duration) linear infinite;
   width: max-content;
+  padding: 4px 8px;
 }
 
 .ad-item {
   min-width: 320px;
-  background: #12141a;
-  border-radius: 10px;
-  border: 1px solid #1f222c;
+  background: linear-gradient(135deg, rgba(26, 28, 36, 0.95), rgba(16, 17, 24, 0.9));
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ad-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 99, 164, 0.4);
 }
 
 .ad-item a {
@@ -181,15 +205,17 @@ export default {
 
 .ad-item img {
   width: 100%;
-  height: 120px;
+  height: 126px;
   object-fit: cover;
   background: #0f1116;
+  filter: saturate(1.08);
 }
 
 .ad-item span {
-  padding: 10px 12px;
-  font-weight: 600;
+  padding: 11px 14px;
+  font-weight: 700;
   font-size: 14px;
+  color: #dde4f6;
 }
 
 @keyframes scroll {
@@ -197,67 +223,85 @@ export default {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50% - 6px));
+    transform: translateX(calc(-50% - 7px));
   }
 }
 
 .content {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .section-title {
   font-size: 18px;
-  font-weight: 700;
-  color: #cfd5e3;
-  margin-bottom: 14px;
+  font-weight: 800;
+  color: #f4f6ff;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .options-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .option-card {
-  background: radial-gradient(circle at 20% 20%, rgba(108, 123, 255, 0.15), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(255, 99, 164, 0.15), transparent 30%),
-    #0f1116;
-  border: 1px solid #1f222c;
-  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(255, 92, 147, 0.16), rgba(108, 123, 255, 0.14)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+    rgba(12, 13, 20, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
   padding: 18px;
   color: #e9edf5;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transition: transform 0.15s ease, border-color 0.2s ease;
+  transition: transform 0.18s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+  position: relative;
+  overflow: hidden;
+}
+
+.option-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.07), transparent 30%);
+  pointer-events: none;
 }
 
 .option-card:hover {
-  transform: translateY(-4px);
-  border-color: #6c7bff;
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 60px rgba(255, 92, 147, 0.18);
 }
 
 .option-card.disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.58;
+  border-style: dashed;
+  box-shadow: none;
 }
 
 .option-label {
   font-size: 18px;
   font-weight: 800;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
+  color: #ffffff;
 }
 
 .option-desc {
   font-size: 13px;
-  color: #9aa4b5;
+  color: #c5cee0;
 }
 
 @media (max-width: 720px) {
   .landing-page {
-    padding: 32px 20px 48px;
+    padding: 36px 20px 56px;
+    background: linear-gradient(135deg, #0b0c14 0%, #070810 100%);
   }
 
   .brand {
