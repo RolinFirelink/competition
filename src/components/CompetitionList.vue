@@ -11,7 +11,7 @@
         <router-link :to="competition.path" class="competition-link">
           <div class="competition-header">
             <div class="competition-date">{{ competition.date }}</div>
-            <div class="competition-badge">已结束</div>
+            <div class="competition-badge">报名中</div>
           </div>
           <div class="competition-title">{{ competition.title }}</div>
           <div class="competition-info">
@@ -58,6 +58,14 @@ export default {
           participants: 70,
           sponsor: '盖世小鸡',
           patron: 'H半瓶'
+        },
+        {
+          path: '/20260328',
+          date: '2026年3月28日',
+          title: '2026年3月28日杯赛',
+          participants: 0,
+          sponsor: 'HJK',
+          patron: '天手力、Ohhhhhua、月光熔铁星、江舞、中二的大黑、阿依在'
         }
         // 未来可以在这里添加更多赛事
       ]
