@@ -73,7 +73,6 @@
           <tr v-for="(participant, index) in participants" :key="index">
             <td>{{ participant.nickname }}</td>
             <td>{{ participant.id }}</td>
-            <td>{{ participant.rank }}</td>
           </tr>
         </tbody>
       </table>
@@ -91,8 +90,158 @@ export default {
       showQrPreview: false,
       participants: [
         {
-          nickname: '示例选手',
-          id: '0000000000',
+          nickname: 'NPC哒',
+          id: '2840493464',
+          rank: '待定'
+        },
+        {
+          nickname: 'Robin',
+          id: '4078352348',
+          rank: '待定'
+        },
+        {
+          nickname: 'Xuers|艾笠如初',
+          id: '1924890682',
+          rank: '待定'
+        },
+        {
+          nickname: '泼墨写春秋',
+          id: '1713524530',
+          rank: '待定'
+        },
+        {
+          nickname: 'xuers｜土间大平',
+          id: '3138934808',
+          rank: '待定'
+        },
+        {
+          nickname: '不想取名字の我',
+          id: '2126980171',
+          rank: '待定'
+        },
+        {
+          nickname: 'hungry bird',
+          id: '2151157324',
+          rank: '待定'
+        },
+        {
+          nickname: '米奇妙妙鬼',
+          id: '1751741531',
+          rank: '待定'
+        },
+        {
+          nickname: '奈欧Neo',
+          id: '1477253645',
+          rank: '待定'
+        },
+        {
+          nickname: 'WildFree.Stugx',
+          id: '1616451996',
+          rank: '待定'
+        },
+        {
+          nickname: '南风南风',
+          id: '1751414745',
+          rank: '待定'
+        },
+        {
+          nickname: 'Avid',
+          id: '1437624290',
+          rank: '待定'
+        },
+        {
+          nickname: '格斗少女江玉燕',
+          id: '2796482837',
+          rank: '待定'
+        },
+        {
+          nickname: '_骨水_',
+          id: '3923918944',
+          rank: '待定'
+        },
+        {
+          nickname: 'Bilibili-昕缘刀妹',
+          id: '2610472011',
+          rank: '待定'
+        },
+        {
+          nickname: 'FLin7',
+          id: '1669229188',
+          rank: '待定'
+        },
+        {
+          nickname: 'ADO1337',
+          id: '2113227374',
+          rank: '待定'
+        },
+        {
+          nickname: 'AOZaki',
+          id: '3431187004',
+          rank: '待定'
+        },
+        {
+          nickname: 'Xuers|Yukiizh',
+          id: '1192893558',
+          rank: '待定'
+        },
+        {
+          nickname: '月落有雪',
+          id: '',
+          rank: '待定'
+        },
+        {
+          nickname: '2sk-超究极混沌暗影之狼狗',
+          id: '3530046468',
+          rank: '待定'
+        },
+        {
+          nickname: '2sk-消失王',
+          id: '',
+          rank: '待定'
+        },
+        {
+          nickname: 'GTW-小宅',
+          id: '',
+          rank: '待定'
+        },
+        {
+          nickname: '学不到猛虎下山了',
+          id: '3085727087',
+          rank: '待定'
+        },
+        {
+          nickname: 'HOT|丹阳大鸟',
+          id: '3291211435',
+          rank: '待定'
+        },
+        {
+          nickname: '脏脏包',
+          id: '4252431000',
+          rank: '待定'
+        },
+        {
+          nickname: '锤锤锤锤锤',
+          id: '1175965295',
+          rank: '待定'
+        },
+        {
+          nickname: 'GTW-菜',
+          id: '2949053681',
+          rank: '待定'
+        },
+        {
+          nickname: 'HOT I KLEM',
+          id: '',
+          rank: '待定'
+        },
+        {
+          nickname: 'HJK l pinkstar',
+          id: '2388112059',
+          rank: '待定'
+        },
+        {
+          nickname: '咲叶pandasaku',
+          id: '',
           rank: '待定'
         }
       ]
