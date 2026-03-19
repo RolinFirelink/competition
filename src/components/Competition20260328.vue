@@ -196,7 +196,7 @@ export default {
         },
         {
           nickname: '2sk-消失王',
-          id: '',
+          id: '4181392148',
           rank: '待定'
         },
         {
@@ -243,7 +243,87 @@ export default {
           nickname: '咲叶pandasaku',
           id: '',
           rank: '待定'
-        }
+        },
+        {
+          nickname: '5hk领域大神',
+          id: '3918309596',
+          rank: '待定'
+        },
+        {
+          nickname: 'COPE',
+          id: '2450621083',
+          rank: '待定'
+        },
+        {
+          nickname: '那天刚刚好',
+          id: '1299158823',
+          rank: '待定'
+        },
+        {
+          nickname: 'Dracula-K',
+          id: '3559764253',
+          rank: '待定'
+        },
+        {
+          nickname: '33prs',
+          id: '2165191875',
+          rank: '待定'
+        },
+        {
+          nickname: '-艾柯耀-',
+          id: '2500339497',
+          rank: '待定'
+        },
+        {
+          nickname: '2sk-孤独的楼',
+          id: '4090019287',
+          rank: '待定'
+        },
+        {
+          nickname: '我欲乘风归去',
+          id: '1395398157',
+          rank: '待定'
+        },
+        {
+          nickname: '汉堡汉堡',
+          id: '',
+          rank: '待定'
+        },
+        {
+          nickname: 'kuroasing',
+          id: '1840204688',
+          rank: '待定'
+        },
+        {
+          nickname: 'GTW-XIAOHU',
+          id: '1687147839',
+          rank: '待定'
+        },
+        {
+          nickname: '武汉洋洋',
+          id: '3332414353',
+          rank: '待定'
+        },
+        {
+          nickname: 'GTW-XiaoXu',
+          id: '3140819469',
+          rank: '待定'
+        },
+        {
+          nickname: '残荷听雨',
+          id: '1839452670',
+          rank: '待定'
+        },
+        {
+          nickname: '名字真难取',
+          id: '3091629655',
+          rank: '待定'
+        },
+        {
+          nickname: '我的精神有点问题',
+          id: '1803160287',
+          rank: '待定'
+        },
       ]
     };
   },
