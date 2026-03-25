@@ -24,14 +24,14 @@
             特别鸣谢：<strong>HJK官方</strong>、天手力、Ohhhhhua、月光熔铁星、江舞、中二的大黑、阿依在
           </span>
         </div>
-        <div class="announcement-item">
+        <div class="announcement-item rules-item">
           <span class="item-label">赛制：</span>
           <span class="item-value">
             八强之前抢三，八强及之后都是抢五，不设复活赛。由于要凑2的幂,所以第一轮有17人随机轮空,剩余选手随机配对,第二轮将会由第一轮晋级选手与轮空选手配对对战。
-            第三轮及之后将一路往上打直到决赛。
+                        第三轮及之后将一路往上打直到决赛。
           </span>
         </div>
-        <div class="announcement-item">
+        <div class="announcement-item statement-item">
           <span class="item-label">声明：</span>
           <span class="item-value">
             八强之前并行打，八强之后一对一对的形式上场打。
@@ -77,7 +77,7 @@
       <div class="round1-title">📋 第一轮分组名单</div>
       <div class="round1-content">
         <div class="round1-note">
-          💡 本轮随机抽取 <strong>17</strong> 人轮空；其余选手随机两两配对。每组最多 4 场（8人），不足部分自然减少场次。
+          💡 本轮随机抽取 <strong>17</strong> 人轮空；其余选手随机两两配对。每组最多 4 场（8人）。
         </div>
 
         <div class="round1-groups-grid">
@@ -92,7 +92,7 @@
               </thead>
               <tbody>
                 <tr class="group-row">
-                  <td colspan="3">第{{ group.index }}组</td>
+                  <td colspan="3">第{{ group.index }}组（并行对阵）</td>
                 </tr>
                 <tr v-for="match in group.matches" :key="match.id">
                   <td>{{ match.id }}</td>
@@ -105,6 +105,7 @@
         </div>
 
         <div class="bye-table-wrapper">
+          <div class="bye-title">🎯 轮空名单（17人）</div>
           <table class="registration-table bye-table">
             <thead>
               <tr>
@@ -521,16 +522,42 @@ export default {
 
 .round1-groups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 16px;
   margin-top: 16px;
+  align-items: start;
 }
 
 .round1-group-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(20, 30, 70, 0.08);
   overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.18);
+}
+
+.round1-group-card .round1-table {
+  background: #ffffff;
+}
+
+.round1-table thead tr {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
+}
+
+.round1-table th {
+  text-align: center;
+}
+
+.round1-table td {
+  text-align: center;
+}
+
+.round1-table tbody tr:nth-child(even) {
+  background-color: #fbfbff;
+}
+
+.round1-table tbody tr:hover {
+  background-color: #f4f6ff;
 }
 
 .bye-table-wrapper {
@@ -539,6 +566,59 @@ export default {
 
 .bye-table {
   font-size: 15px;
+}
+
+.bye-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  padding-left: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.bye-table thead tr {
+  background: linear-gradient(135deg, rgba(243, 147, 251, 0.22) 0%, rgba(245, 87, 108, 0.14) 100%);
+}
+
+.bye-table th {
+  text-align: center;
+}
+
+.bye-table td:first-child {
+  width: 72px;
+}
+
+.bye-table td:last-child {
+  color: #666666;
+  font-weight: 500;
+}
+
+.rules-item,
+.statement-item {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.06) 0%, rgba(118, 75, 162, 0.06) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.18);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.statement-item {
+  background: linear-gradient(135deg, rgba(245, 87, 108, 0.08) 0%, rgba(243, 147, 251, 0.06) 100%);
+  border-color: rgba(245, 87, 108, 0.22);
+}
+
+.rules-item .item-label,
+.statement-item .item-label {
+  min-width: auto;
+  color: #2c3e50;
+  font-weight: 800;
+}
+
+.rules-item .item-value,
+.statement-item .item-value {
+  color: #333333;
+  line-height: 1.8;
 }
 </style>
 
