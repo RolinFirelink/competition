@@ -24,6 +24,19 @@
             特别鸣谢：<strong>HJK官方</strong>、天手力、Ohhhhhua、月光熔铁星、江舞、中二的大黑、阿依在
           </span>
         </div>
+        <div class="announcement-item">
+          <span class="item-label">赛制：</span>
+          <span class="item-value">
+            八强之前抢三，八强及之后都是抢五，不设复活赛。由于要凑2的幂,所以第一轮有17人随机轮空,剩余选手随机配对,第二轮将会由第一轮晋级选手与轮空选手配对对战。
+            第三轮及之后将一路往上打直到决赛。
+          </span>
+        </div>
+        <div class="announcement-item">
+          <span class="item-label">声明：</span>
+          <span class="item-value">
+            八强之前并行打，八强之后一对一对的形式上场打。
+          </span>
+        </div>
 
         <div class="announcement-item qr-section">
           <span class="item-label">报名二维码：</span>
@@ -60,6 +73,58 @@
       </div>
     </div>
 
+    <div class="round1-wrapper">
+      <div class="round1-title">📋 第一轮分组名单</div>
+      <div class="round1-content">
+        <div class="round1-note">
+          💡 本轮随机抽取 <strong>17</strong> 人轮空；其余选手随机两两配对。每组最多 4 场（8人），不足部分自然减少场次。
+        </div>
+
+        <div class="round1-groups-grid">
+          <div v-for="group in firstRoundGroups" :key="group.index" class="round1-group-card">
+            <table class="round1-table">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>昵称A</th>
+                  <th>昵称B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group-row">
+                  <td colspan="3">第{{ group.index }}组</td>
+                </tr>
+                <tr v-for="match in group.matches" :key="match.id">
+                  <td>{{ match.id }}</td>
+                  <td>{{ match.playerA.nickname }}</td>
+                  <td>{{ match.playerB.nickname }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bye-table-wrapper">
+          <table class="registration-table bye-table">
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>轮空昵称</th>
+                <th>街霸ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(p, idx) in byeParticipants" :key="idx">
+                <td>{{ idx + 1 }}</td>
+                <td>{{ p.nickname }}</td>
+                <td>{{ p.id || '-' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <div class="table-wrapper">
       <table class="registration-table">
         <thead>
@@ -83,11 +148,16 @@
 <script>
 export default {
   name: 'Competition20260328',
+  created() {
+    this.initFirstRound();
+  },
   data() {
     return {
       qrCodeUrl:
         'https://rolin-typora.oss-cn-guangzhou.aliyuncs.com/91faac1245645b3b0c31a69f80b06993.jpg',
       showQrPreview: false,
+      byeParticipants: [],
+      firstRoundGroups: [],
       participants: [
         {
           nickname: 'NPC哒',
@@ -152,11 +222,6 @@ export default {
         {
           nickname: '格斗少女江玉燕',
           id: '2796482837',
-          rank: '待定'
-        },
-        {
-          nickname: '_骨水_',
-          id: '3923918944',
           rank: '待定'
         },
         {
@@ -255,11 +320,6 @@ export default {
           rank: '待定'
         },
         {
-          nickname: '那天刚刚好',
-          id: '1299158823',
-          rank: '待定'
-        },
-        {
           nickname: 'Dracula-K',
           id: '3559764253',
           rank: '待定'
@@ -329,10 +389,55 @@ export default {
           id: '3778650570',
           rank: '待定'
         },
+        {
+          nickname: '马嘉祺超绝肌肉线条',
+          id: '3966050394',
+          rank: '待定'
+        },
       ]
     };
   },
   methods: {
+    initFirstRound() {
+      const byeCount = 17;
+      const all = [...this.participants];
+      const shuffled = this.shuffleArray(all);
+
+      const byes = shuffled.slice(0, byeCount);
+      const playPlayers = shuffled.slice(byeCount);
+
+      const matches = [];
+      for (let i = 0; i < playPlayers.length; i += 2) {
+        const playerA = playPlayers[i];
+        const playerB = playPlayers[i + 1];
+        if (!playerB) break;
+        matches.push({
+          id: matches.length + 1,
+          playerA,
+          playerB
+        });
+      }
+
+      const groups = [];
+      const matchesPerGroup = 4; // 4场 = 8人
+      for (let i = 0; i < matches.length; i += matchesPerGroup) {
+        groups.push({
+          index: groups.length + 1,
+          matches: matches.slice(i, i + matchesPerGroup)
+        });
+      }
+
+      this.byeParticipants = byes;
+      this.firstRoundGroups = groups;
+    },
+    shuffleArray(arr) {
+      // Fisher-Yates shuffle (in-place)
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    },
     openQrPreview() {
       this.showQrPreview = true;
     },
@@ -412,6 +517,28 @@ export default {
   color: #fff;
   font-size: 13px;
   cursor: pointer;
+}
+
+.round1-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.round1-group-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.bye-table-wrapper {
+  margin-top: 18px;
+}
+
+.bye-table {
+  font-size: 15px;
 }
 </style>
 
